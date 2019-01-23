@@ -7,7 +7,9 @@ message Portfolio {
   string summary = 2;
   repeated Education education_experience = 3;
   repeated Experience professional_experience = 4;
-  Skills skills = 5;
+  repeated Certifications certifications = 5;
+  Skills skills = 6;
+  repeated Honors honors_and_awards = 7;
 }
 
 message UserDetails {
@@ -37,12 +39,13 @@ message Profile {
 }
 
 message Education {
-  string school = 1;
-  string degree = 2;
-  string field_of_study = 3;
-  Date start_date = 4;
-  Date end_date = 5;
-  repeated Courses subjects = 6;
+  string degree = 1;
+  string field_of_study = 2;
+  string school = 3;
+  Address location = 4;
+  Date start_date = 5;
+  Date end_date = 6;
+  repeated Courses subjects = 7;
 }
 
 message Courses {
@@ -52,7 +55,7 @@ message Courses {
 }
 
 message Experience {
-  string tittle = 1;
+  string job_tittle = 1;
   string client = 2;
   Address location = 3;
   Date start_date = 4;
@@ -64,5 +67,13 @@ message Skills {
   repeated programming_languages = 1;
   repeated frameworks = 2;
   repeated tool_or_skill = 3;
+}
+
+message Certifications {
+
+}
+
+message Honors {
+  
 }
 
