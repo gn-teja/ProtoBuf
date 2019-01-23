@@ -4,9 +4,10 @@ package com.gn.proto.portfolio;
 
 message Portfolio {
   UserDetails user = 1;
-  repeated Education edu = 2;
-  repeated Experience experience = 3;
-  Skills skills = 4;
+  string summary = 2;
+  repeated Education education_experience = 3;
+  repeated Experience professional_experience = 4;
+  Skills skills = 5;
 }
 
 message UserDetails {
