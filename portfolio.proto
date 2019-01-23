@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+package com.gn.proto.portfolio;
+
+message Portfolio {
+  UserDetails user = 1;
+  repeated Education edu = 2;
+  repeated Experience experience = 3;
+  Skills skills = 4;
+}
+
+message UserDetails {
+ string name = 1;
+ string current_position = 2;
+ string date_of_birth = 3;
+ ContactInfo contact_info = 4;
+}
+message ContactInfo {
+ int32 phone_number = 1;
+ string email_address = 2;
+ Address address = 3;
+ repeated Profile profile = 4;
+}
+
+message Address {
+  string location = 1;
+  string city = 2;
+  string state = 3;
+  string country = 4;
+  int32 zipcode = 5;
+}
+
+message Profile {
+  string profile_name = 1;
+  string url = 2;
+}
+
+message Education {
+  string school = 1;
+  string degree = 2;
+  string field_of_study = 3;
+  Date start_date = 4;
+  Date end_date = 5;
+  repeated Courses subjects = 6;
+}
+
+message Courses {
+  string subject_id = 1;
+  string subject = 2;
+  string credits = 3;
+}
+
+message Experience {
+  string tittle = 1;
+  string client = 2;
+  Address location = 3;
+  Date start_date = 4;
+  Date end_date = 5;
+  repeated string roles_and_responsibilities = 6; 
+}
+
+message Skills {
+  repeated programming_languages = 1;
+  repeated frameworks = 2;
+  repeated tool_or_skill = 3;
+}
+
