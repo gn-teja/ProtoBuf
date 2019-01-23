@@ -1,2 +1,2 @@
-# ProtoBuf
-Examples of protocol buffers
+# Proto Buffers
+
