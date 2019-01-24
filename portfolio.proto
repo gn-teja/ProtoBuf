@@ -1,6 +1,11 @@
 syntax = "proto3";
 
-package com.gn.proto.portfolio;
+package example.portfolio;
+
+option java_package = "com.gn.proto.portfolio";
+
+//to define multiple files for all the messages  
+option java_multiple_files = true;
 
 message Portfolio {
   UserDetails user = 1;
